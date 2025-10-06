@@ -1,3 +1,15 @@
+@keyframes aumenta_estado {
+  0% { /* Começo da animação */
+        width: 300px
+  }
+
+  100% { /* Fim da animação */
+        width: 350px;
+    }
+}
+
+
+
 body{
     background-color: rgb(185, 185, 185);
     text-align: center;
@@ -16,17 +28,27 @@ body{
     border:         3px solid rgb(0, 0, 0);
     margin:         0px 10px;
     border-radius:  20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 .quadrado{
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
     background-color: aqua;
     display: flex;
+    border-radius:3px;
 }
 .centraliza{
-    margin: 0px;
+    background-color: rgb(153, 153, 153);
+    border-radius: 10px;
+    width: 300px;
+    border-top: 7px solid aqua;
+    padding: 5px;
+    margin: 10px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.centraliza:hover{
+    animation-name: aumenta_estado ;
+    animation-duration: 0.5;
 }

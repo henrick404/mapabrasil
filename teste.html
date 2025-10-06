@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cultura dos Estados do Brasil</title>
   <style>
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #00a86b, #008cff);
@@ -11,109 +13,425 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-    }header {
-  text-align: center;
-  padding: 40px 20px 20px 20px;
-}
-
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-#mapa-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0 auto;
-  max-width: 800px;
-  height: auto;
-}
-
-svg {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-
-path {
-  fill: #00b894;
-  stroke: #fff;
-  stroke-width: 1;
-  transition: fill 0.3s ease;
-}
-
-path:hover {
-  fill: #ffe066;
-}
-
-text {
-  fill: #fff;
-  font-size: 8px;
-  font-weight: bold;
-  pointer-events: none;
-  text-anchor: middle;
-}
-
-#info {
-  margin: 40px auto;
-  width: 80%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
-
-.titulo-estado {
-  font-size: 1.8rem;
-  color: #ffd700;
-  margin-bottom: 10px;
-}
-
-.bandeira {
-  width: 150px;
-  border-radius: 10px;
-  margin: 10px auto;
-  display: block;
-}
-
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    #mapa-container {
+        background-image: url(mapa-do-brasil-legendado-pintado-regioes.jpg);  
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        max-width: 800px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    svg {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    
+    path {
+      fill: #00b894;
+      stroke: #fff;
+      stroke-width: 1;
+      transition: all 0.3s ease;
+    }
+    
+    path:hover {
+      fill: #ffe066;
+      transform: scale(1.02);
+      filter: drop-shadow(0 0 5px rgba(255, 224, 102, 0.7));
+    }
+    
+    text {
+      fill: #fff;
+      font-size: 8px;
+      font-weight: bold;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+    
+    #info {
+      margin: 40px auto;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+    }
+    
+    .titulo-estado {
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bandeira {
+      width: 150px;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border: 2px solid white;
+    }
+    
+    .cultura-texto {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+    
+    .destaque {
+      color: #ffd700;
+      font-weight: bold;
+    }
+    
+    .audio-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .audio-btn {
+      background: linear-gradient(to right, #ff8a00, #ff2070);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .audio-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .audio-btn.playing {
+      background: linear-gradient(to right, #ff2070, #ff8a00);
+    }
+    
+    .audio-desc {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* Estados com cores diferentes por região */
+    .norte { fill: #00b894; }
+    .nordeste { fill: #0984e3; }
+    .centro-oeste { fill: #e17055; }
+    .sudeste { fill: #a29bfe; }
+    .sul { fill: #fd79a8; }
+    
+    .norte:hover { fill: #55efc4; }
+    .nordeste:hover { fill: #74b9ff; }
+    .centro-oeste:hover { fill: #fab1a0; }
+    .sudeste:hover { fill: #d6d4ff; }
+    .sul:hover { fill: #ffb8c6; }
   </style>
 </head>
 <body>
   <header>
     <h1>🌎 Cultura dos Estados do Brasil</h1>
-    <p>Clique em um estado do mapa para conhecer suas tradições culturais!</p>
-  </header>  <div id="mapa-container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 950">
-      <!-- Exemplo simplificado: Apenas alguns estados desenhados -->
-      <path id="SP" d="M500,700 L550,690 L560,740 L510,750 Z" onclick="mostrar('SP')"></path>
-      <path id="RJ" d="M560,740 L600,720 L610,750 L570,770 Z" onclick="mostrar('RJ')"></path>
-      <path id="MG" d="M510,650 L570,670 L560,720 L500,700 Z" onclick="mostrar('MG')"></path>
-      <path id="BA" d="M570,670 L630,670 L640,730 L580,740 Z" onclick="mostrar('BA')"></path>
-      <path id="RS" d="M450,820 L510,820 L500,870 L440,860 Z" onclick="mostrar('RS')"></path>
-      <path id="AM" d="M220,420 L320,430 L310,500 L210,490 Z" onclick="mostrar('AM')"></path><!-- Nomes dos estados -->
-  <text x="530" y="720">SP</text>
-  <text x="585" y="750">RJ</text>
-  <text x="540" y="680">MG</text>
-  <text x="600" y="700">BA</text>
-  <text x="470" y="850">RS</text>
-  <text x="270" y="460">AM</text>
-</svg>
+    <p>Clique em um estado do mapa para conhecer suas tradições culturais e ouvir sons característicos!</p>
+  </header>
+  
+  <div id="mapa-container">
 
-  </div>  <div id="info">
-    <p>As informações culturais aparecerão aqui!</p>
-  </div>  <script>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+      <!-- Região Norte -->
+      <path id="AC" class="norte" d="M200,400 L250,380 L270,430 L220,450 Z" onclick="mostrar('AC')"></path>
+      <path id="AM" class="norte" d="M250,300 L350,320 L340,400 L240,380 Z" onclick="mostrar('AM')"></path>
+      <path id="RR" class="norte" d="M320,200 L380,210 L370,270 L310,260 Z" onclick="mostrar('RR')"></path>
+      <path id="RO" class="norte" d="M280,420 L330,430 L320,480 L270,470 Z" onclick="mostrar('RO')"></path>
+      <path id="PA" class="norte" d="M350,350 L450,370 L440,450 L340,430 Z" onclick="mostrar('PA')"></path>
+      <path id="AP" class="norte" d="M450,250 L500,260 L490,320 L440,310 Z" onclick="mostrar('AP')"></path>
+      <path id="TO" class="norte" d="M400,400 L470,420 L460,480 L390,460 Z" onclick="mostrar('TO')"></path>
+      
+      <!-- Região Nordeste -->
+      <path id="MA" class="nordeste" d="M450,350 L520,370 L510,430 L440,410 Z" onclick="mostrar('MA')"></path>
+      <path id="PI" class="nordeste" d="M500,400 L560,420 L550,470 L490,450 Z" onclick="mostrar('PI')"></path>
+      <path id="CE" class="nordeste" d="M550,350 L610,370 L600,420 L540,400 Z" onclick="mostrar('CE')"></path>
+      <path id="RN" class="nordeste" d="M590,370 L640,380 L630,420 L580,410 Z" onclick="mostrar('RN')"></path>
+      <path id="PB" class="nordeste" d="M600,400 L650,410 L640,450 L590,440 Z" onclick="mostrar('PB')"></path>
+      <path id="PE" class="nordeste" d="M580,430 L640,450 L630,500 L570,480 Z" onclick="mostrar('PE')"></path>
+      <path id="AL" class="nordeste" d="M620,460 L670,470 L660,510 L610,500 Z" onclick="mostrar('AL')"></path>
+      <path id="SE" class="nordeste" d="M650,480 L700,490 L690,530 L640,520 Z" onclick="mostrar('SE')"></path>
+      <path id="BA" class="nordeste" d="M520,450 L600,470 L590,550 L510,530 Z" onclick="mostrar('BA')"></path>
+      
+      <!-- Região Centro-Oeste -->
+      <path id="MT" class="centro-oeste" d="M380,450 L460,470 L450,550 L370,530 Z" onclick="mostrar('MT')"></path>
+      <path id="MS" class="centro-oeste" d="M370,550 L440,570 L430,630 L360,610 Z" onclick="mostrar('MS')"></path>
+      <path id="GO" class="centro-oeste" d="M460,500 L520,520 L510,580 L450,560 Z" onclick="mostrar('GO')"></path>
+      <path id="DF" class="centro-oeste" d="M500,530 L520,540 L510,560 L490,550 Z" onclick="mostrar('DF')"></path>
+      
+      <!-- Região Sudeste -->
+      <path id="SP" class="sudeste" d="M470,580 L530,600 L520,660 L460,640 Z" onclick="mostrar('SP')"></path>
+      <path id="RJ" class="sudeste" d="M530,620 L580,630 L570,680 L520,670 Z" onclick="mostrar('RJ')"></path>
+      <path id="MG" class="sudeste" d="M480,550 L540,570 L530,620 L470,600 Z" onclick="mostrar('MG')"></path>
+      <path id="ES" class="sudeste" d="M550,580 L590,590 L580,630 L540,620 Z" onclick="mostrar('ES')"></path>
+      
+      <!-- Região Sul -->
+      <path id="PR" class="sul" d="M430,630 L490,650 L480,700 L420,680 Z" onclick="mostrar('PR')"></path>
+      <path id="SC" class="sul" d="M450,700 L500,710 L490,750 L440,740 Z" onclick="mostrar('SC')"></path>
+      <path id="RS" class="sul" d="M400,700 L470,720 L460,800 L390,780 Z" onclick="mostrar('RS')"></path>
+      
+      <!-- Nomes dos estados -->
+      <text x="235" y="420">AC</text>
+      <text x="295" y="350">AM</text>
+      <text x="345" y="235">RR</text>
+      <text x="300" y="450">RO</text>
+      <text x="395" y="400">PA</text>
+      <text x="465" y="285">AP</text>
+      <text x="430" y="440">TO</text>
+      
+      <text x="485" y="390">MA</text>
+      <text x="525" y="435">PI</text>
+      <text x="575" y="385">CE</text>
+      <text x="615" y="395">RN</text>
+      <text x="620" y="425">PB</text>
+      <text x="605" y="465">PE</text>
+      <text x="640" y="485">AL</text>
+      <text x="670" y="505">SE</text>
+      <text x="555" y="500">BA</text>
+      
+      <text x="415" y="500">MT</text>
+      <text x="405" y="590">MS</text>
+      <text x="485" y="540">GO</text>
+      <text x="505" y="545">DF</text>
+      
+      <text x="500" y="620">SP</text>
+      <text x="555" y="650">RJ</text>
+      <text x="505" y="585">MG</text>
+      <text x="565" y="605">ES</text>
+      
+      <text x="455" y="665">PR</text>
+      <text x="475" y="725">SC</text>
+      <text x="435" y="750">RS</text>
+    </svg>
+  </div>
+  
+  <div id="info">
+    <p>Clique em um estado para descobrir suas tradições culturais!</p>
+  </div>
+  
+  <footer>
+    <p>Mapa Interativo do Brasil - Cultura e Tradições | Desenvolvido com HTML, CSS e JavaScript</p>
+  </footer>
+  
+  <script>
     const dados = {
-      SP: { nome: "São Paulo", bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg", cultura: "Centro cultural e econômico do país, com culinária e arte diversas." },
-      RJ: { nome: "Rio de Janeiro", bandeira: "https://upload.wikimedia.org/wikipedia/commons/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg", cultura: "Famoso pelo samba, Carnaval e praias icônicas." },
-      MG: { nome: "Minas Gerais", bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bandeira_de_Minas_Gerais.svg", cultura: "Famoso pelo pão de queijo, feijão tropeiro e arquitetura colonial." },
-      BA: { nome: "Bahia", bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/28/Bandeira_da_Bahia.svg", cultura: "Berço do axé, do acarajé e das festas populares de Salvador." },
-      RS: { nome: "Rio Grande do Sul", bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bandeira_do_Rio_Grande_do_Sul.svg", cultura: "Cultura gaúcha: chimarrão, churrasco e danças tradicionais." },
-      AM: { nome: "Amazonas", bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bandeira_do_Amazonas.svg", cultura: "Famoso pelo Festival de Parintins e pela culinária com peixes regionais." }
+      AC: { 
+        nome: "Acre", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
+        cultura: "Estado da região Norte conhecido pela forte presença da cultura nordestina, com festividades como o aniversário do estado e a Feira de Exposições. A culinária local inclui pratos com peixes de água doce e frutas regionais.",
+        audioDesc: "Som da floresta amazônica com pássaros e animais"
+      },
+      AM: { 
+        nome: "Amazonas", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bandeira_do_Amazonas.svg", 
+        cultura: "Famoso pelo Festival Folclórico de Parintins, uma das maiores manifestações culturais do país. A culinária é baseada em peixes regionais como tambaqui e pirarucu, preparados com ingredientes da floresta.",
+        audioDesc: "Som da floresta amazônica com animais e rios"
+      },
+      RR: { 
+        nome: "Roraima", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/9/98/Bandeira_de_Roraima.svg", 
+        cultura: "Estado com forte influência indígena, especialmente das etnias Yanomami e Macuxi. O Festival de Praia de Boa Vista é um dos principais eventos, celebrando as belezas naturais do estado.",
+        audioDesc: "Som de vento e pássaros do cerrado"
+      },
+      RO: { 
+        nome: "Rondônia", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Bandeira_de_Rond%C3%B4nia.svg", 
+        cultura: "Conhecido pelo Arraial Flor do Maracujá, um dos maiores festejos juninos da região Norte. A culinária mescla influências nordestinas, paulistas e sulistas, com destaque para o churrasco pantaneiro.",
+        audioDesc: "Som de festa junina com forró"
+      },
+      PA: { 
+        nome: "Pará", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/02/Bandeira_do_Par%C3%A1.svg", 
+        cultura: "Berço do Carimbó, dança de origem africana que deu origem à lambada e ao zouk. O Círio de Nazaré, em Belém, é uma das maiores procissões católicas do mundo. A culinária paraense é famosa pelo açaí e pelo pato no tucupi.",
+        audioDesc: "Som de Carimbó e festividades"
+      },
+      AP: { 
+        nome: "Amapá", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bandeira_do_Amap%C3%A1.svg", 
+        cultura: "Estado com forte presença da cultura marabaixa, manifestação afro-brasileira que celebra a resistência negra. A culinária é rica em peixes e frutos do mar, com destaque para o camarão no bafo.",
+        audioDesc: "Som de tambores do marabaixa"
+      },
+      TO: { 
+        nome: "Tocantins", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bandeira_do_Tocantins.svg", 
+        cultura: "Conhecido pela Festa do Divino Espírito Santo e pela Cavalhada, representação medieval que acontece em cidades como Natividade. A culinária inclui pratos como arroz com pequi e guariroba.",
+        audioDesc: "Som de cavalos e festas tradicionais"
+      },
+      MA: { 
+        nome: "Maranhão", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/45/Bandeira_do_Maranh%C3%A3o.svg", 
+        cultura: "Terra do Bumba Meu Boi, manifestação cultural que mistura teatro, música e dança, reconhecida como Patrimônio Cultural Imaterial da Humanidade. O Tambor de Crioula é outra expressão cultural importante.",
+        audioDesc: "Som de tambores do Bumba Meu Boi"
+      },
+      PI: { 
+        nome: "Piauí", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/3/33/Bandeira_do_Piau%C3%AD.svg", 
+        cultura: "Conhecido pelas tradições juninas, especialmente em Campo Maior, que realiza um dos maiores carnavais fora de época do Nordeste. A culinária inclui a carne de sol e a panelada.",
+        audioDesc: "Som de forró e festas juninas"
+      },
+      CE: { 
+        nome: "Ceará", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Bandeira_do_Cear%C3%A1.svg", 
+        cultura: "Terra do humor e do forró, com grandes festivais como o Ceará Music. A cultura cearense é marcada pela literatura de cordel, xilogravura e artesanato em renda. A culinária é famosa pela carne de sol e baião de dois.",
+        audioDesc: "Som de forró pé-de-serra"
+      },
+      RN: { 
+        nome: "Rio Grande do Norte", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/3/30/Bandeira_do_Rio_Grande_do_Norte.svg", 
+        cultura: "Conhecido pelas belas praias e pelo Maior São João do Mundo, em Campina Grande. A cultura potiguar é marcada pelo artesanato em cerâmica e pela música, com destaque para o forró.",
+        audioDesc: "Som de ondas do mar e forró"
+      },
+      PB: { 
+        nome: "Paraíba", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bandeira_da_Para%C3%ADba.svg", 
+        cultura: "Terra do maior São João do Mundo, em Campina Grande, e do Repente, manifestação musical típica do Nordeste. A culinária paraibana inclui a galinha à cabidela e a rapadura.",
+        audioDesc: "Som de repente e viola"
+      },
+      PE: { 
+        nome: "Pernambuco", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/5/59/Bandeira_de_Pernambuco.svg", 
+        cultura: "Berço do Frevo e do Maracatu, ritmos que animam o Carnaval de Recife e Olinda. A cultura pernambucana também é marcada pelo artesanato em barro e madeira. A culinária é famosa pelo bolo de rolo e pela carne de sol com macaxeira.",
+        audioDesc: "Som de frevo e maracatu"
+      },
+      AL: { 
+        nome: "Alagoas", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/8/88/Bandeira_de_Alagoas.svg", 
+        cultura: "Terra do Guerreiro, folguedo natalino que mistura elementos indígenas, africanos e europeus. A culinária alagoana é famosa pelo sururu, molusco preparado com leite de coco e servido com pirão.",
+        audioDesc: "Som de sururu sendo preparado"
+      },
+      SE: { 
+        nome: "Sergipe", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/be/Bandeira_de_Sergipe.svg", 
+        cultura: "Conhecido pelo São João de Estância, um dos mais tradicionais do Nordeste, e pelo artesanato em renda e palha. A culinária sergipana inclui a moqueca e o caranguejo.",
+        audioDesc: "Som de forró e festas juninas"
+      },
+      BA: { 
+        nome: "Bahia", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/28/Bandeira_da_Bahia.svg", 
+        cultura: "Berço do axé, do acarajé e do Carnaval de Salvador, considerado a maior festa de rua do mundo. A cultura baiana é marcada pelo candomblé, capoeira e pelo artesanato em couro e madeira.",
+        audioDesc: "Som de axé e tambores do candomblé"
+      },
+      MT: { 
+        nome: "Mato Grosso", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Bandeira_de_Mato_Grosso.svg", 
+        cultura: "Estado com forte influência das culturas indígen, pantaneira e sulista. A Festa de São Benedito, em Cuiabá, é uma das principais manifestações culturais. A culinária inclui o pacu assado e a farofa de banana.",
+        audioDesc: "Som de viola de cocho e siriri"
+      },
+      MS: { 
+        nome: "Mato Grosso do Sul", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg", 
+        cultura: "Terra do chamamé, ritmo musical originário da fronteira com o Paraguai, e da cultura pantaneira. A culinária é baseada em carnes bovinas e peixes de água doce.",
+        audioDesc: "Som de chamamé e natureza pantaneira"
+      },
+      GO: { 
+        nome: "Goiás", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_Goi%C3%A1s.svg", 
+        cultura: "Conhecido pelas Cavalhadas de Pirenópolis e pela Festa do Divino. A cultura goiana é marcada pela viola caipira e pelo cururu. A culinária inclui o arroz com pequi e o empadão goiano.",
+        audioDesc: "Som de viola caipira e folia do divino"
+      },
+      DF: { 
+        nome: "Distrito Federal", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg", 
+        cultura: "Capital do país, com cultura diversificada por receber pessoas de todos os estados. Conhecido pela Feira da Torre de TV e pelos festivais de música. A culinária reflete a diversidade brasileira.",
+        audioDesc: "Som da cidade e diversidade cultural"
+      },
+      SP: { 
+        nome: "São Paulo", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg", 
+        cultura: "Centro cultural e econômico do país, com diversidade de influências de imigrantes italianos, japoneses, árabes e outros. Conhecido pela Avenida Paulista, Museus e pela pizza. A culinária paulista é uma mistura de tradições.",
+        audioDesc: "Som do trânsito e movimento da cidade"
+      },
+      RJ: { 
+        nome: "Rio de Janeiro", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg", 
+        cultura: "Famoso pelo samba, Carnaval e praias icônicas como Copacabana e Ipanema. A cultura carioca é marcada pela bossa nova, pelo futebol e pelo pão de açúcar. A culinária inclui a feijoada e o churrasco.",
+        audioDesc: "Som de samba e ondas do mar"
+      },
+      MG: { 
+        nome: "Minas Gerais", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bandeira_de_Minas_Gerais.svg", 
+        cultura: "Famoso pelo pão de queijo, feijão tropeiro e arquitetura colonial das cidades históricas. A cultura mineira é marcada pelo queijo, cachaça e pela música sertaneja. As festas juninas são muito tradicionais.",
+        audioDesc: "Som de viola e festas juninas"
+      },
+      ES: { 
+        nome: "Espírito Santo", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg", 
+        cultura: "Conhecido pela Festa da Penha e pela culinária com influência italiana e africana. A moqueca capixaba, preparada em panela de barro, é o prato mais famoso. A cultura é marcada pelas bandas de congo.",
+        audioDesc: "Som de congo e ondas do mar"
+      },
+      PR: { 
+        nome: "Paraná", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/9/93/Bandeira_do_Paran%C3%A1.svg", 
+        cultura: "Estado com forte influência europeia, especialmente alemã, italiana, polonesa e ucraniana. Conhecido pelas Cataratas do Iguaçu e pela Festa da Uva. A culinária inclui o barreado e o pierogi.",
+        audioDesc: "Som de danças folclóricas europeias"
+      },
+      SC: { 
+        nome: "Santa Catarina", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Bandeira_de_Santa_Catarina.svg", 
+        cultura: "Estado com forte influência alemã, italiana e açoriana. Conhecido pela Oktoberfest de Blumenau e pelas praias. A culinária inclui o marreco com repolho roxo e o café colonial.",
+        audioDesc: "Som de música alemã e ondas do mar"
+      },
+      RS: { 
+        nome: "Rio Grande do Sul", 
+        bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bandeira_do_Rio_Grande_do_Sul.svg", 
+        cultura: "Cultura gaúcha marcada pelo chimarrão, churrasco e danças tradicionais como o fandango. A Semana Farroupilha celebra as tradições gaúchas. A culinária inclui o arroz de carreteiro e o churrasco.",
+        audioDesc: "Som de gaita e fandango"
+      }
     };
+
+    let audioContext = null;
+    let noiseNode = null;
+    let isPlaying = false;
 
     function mostrar(uf) {
       const estado = dados[uf];
@@ -122,9 +440,67 @@ text {
         infoDiv.innerHTML = `
           <h2 class='titulo-estado'>${estado.nome}</h2>
           <img class='bandeira' src='${estado.bandeira}' alt='Bandeira de ${estado.nome}'>
-          <p>${estado.cultura}</p>
+          <p class='cultura-texto'>${estado.cultura}</p>
+          <div class='audio-container'>
+            <button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>
+            <p class='audio-desc'>${estado.audioDesc}</p>
+          </div>
         `;
       }
     }
-  </script></body>
+
+    function toggleAudio() {
+      if (isPlaying) {
+        stopWhiteNoise();
+      } else {
+        playWhiteNoise();
+      }
+    }
+
+    function playWhiteNoise() {
+      try {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        const bufferSize = 2 * audioContext.sampleRate;
+        const noiseBuffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        
+        for (let i = 0; i < bufferSize; i++) {
+          output[i] = Math.random() * 2 - 1;
+        }
+        
+        noiseNode = audioContext.createBufferSource();
+        noiseNode.buffer = noiseBuffer;
+        noiseNode.loop = true;
+        
+        noiseNode.connect(audioContext.destination);
+        noiseNode.start();
+        
+        isPlaying = true;
+        document.getElementById('audioBtn').textContent = "Parar Som";
+        document.getElementById('audioBtn').classList.add('playing');
+      } catch (error) {
+        console.error("Erro ao reproduzir áudio:", error);
+        alert("Não foi possível reproduzir o áudio. Verifique as permissões do seu navegador.");
+      }
+    }
+
+    function stopWhiteNoise() {
+      if (noiseNode) {
+        noiseNode.stop();
+        noiseNode.disconnect();
+        noiseNode = null;
+      }
+      
+      if (audioContext) {
+        audioContext.close();
+        audioContext = null;
+      }
+      
+      isPlaying = false;
+      document.getElementById('audioBtn').textContent = "Ouvir Som Característico";
+      document.getElementById('audioBtn').classList.remove('playing');
+    }
+  </script>
+</body>
 </html>
