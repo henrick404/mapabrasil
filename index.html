@@ -57,7 +57,7 @@
     
     path {
       fill: #00b894;
-      stroke: #fff;
+
       stroke-width: 1;
       transition: all 0.3s ease;
     }
@@ -158,11 +158,11 @@
     }
     
     /* Estados com cores diferentes por região */
-    .norte { fill: #00b893c7; }
-    .nordeste { fill: #e30909d7; }
-    .centro-oeste { fill: #fd8535a9; }
-    .sudeste { fill: #fcff36bb; }
-    .sul { fill: #b779fdc0; }
+    .norte { fill: #00b89300; }
+    .nordeste { fill: #e3090900; }
+    .centro-oeste { fill: #fd853500; }
+    .sudeste { fill: #fcff3600; }
+    .sul { fill: #b779fd00; }
     
 
   </style>
@@ -173,7 +173,7 @@
     <p>Clique em um estado do mapa para conhecer suas tradições culturais e ouvir sons característicos!</p>
   </header>
   
-  <div id="mapa-container">
+  <div id="mapa-container" onclick="scrollToSection(info)">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
       <!-- Região Norte -->
@@ -209,7 +209,7 @@
       <path id="ES" class="sudeste" d="M840,610 L865,625 L830,690 L800,690 Z" onclick="mostrar('ES')"></path>
       
       <!-- Região Sul -->
-      <path id="PR" class="sul" d="M530,720 L600,740 L630,810 L510,810 Z" onclick="mostrar('PR')"></path>
+      <path id="PR" class="sul" d="M530,720 L600,740 L630,810 L510,810 Z" onclick="mostrar('PR')" </path>
       <path id="SC" class="sul" d="M570,830 L630,820 L610,890 L570,860 L520,830 L520,820 Z" onclick="mostrar('SC')"></path>
       <path id="RS" class="sul" d="M510,840 L600,900 L530,990 L430,920 Z" onclick="mostrar('RS')"></path>
       
@@ -226,7 +226,16 @@
   </footer>
   
   <script>
-    const dados = {
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+
+    const dados = {    
+
+
       AC: { 
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
@@ -393,8 +402,9 @@
       const estado = dados[uf];
       const infoDiv = document.getElementById('info');
       if (estado) {
+
         infoDiv.innerHTML = `
-          <h2 class='titulo-estado'>${estado.nome}</h2>
+          <h2 class='titulo-estado' id="scroll">${estado.nome}</h2>
           <img class='bandeira' src='${estado.bandeira}' alt='Bandeira de ${estado.nome}'>
           <p class='cultura-texto'>${estado.cultura}</p>
           <div class='audio-container'>
@@ -402,7 +412,12 @@
             <p class='audio-desc'>${estado.audioDesc}</p>
           </div>
         `;
-      }
+        }
+    }
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ 
+            behavior: 'smooth' 
+        });
     }
 
     function toggleAudio() {
