@@ -6,6 +6,7 @@
   <title>Cultura dos Estados do Brasil</title>
   <style>
 
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #00a86b, #008cff);
@@ -173,7 +174,7 @@
     <p>Clique em um estado do mapa para conhecer suas tradições culturais e ouvir sons característicos!</p>
   </header>
   
-  <div id="mapa-container" onclick="scrollToSection(info)">
+  <div id="mapa-container" >
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
       <!-- Região Norte -->
@@ -209,7 +210,7 @@
       <path id="ES" class="sudeste" d="M840,610 L865,625 L830,690 L800,690 Z" onclick="mostrar('ES')"></path>
       
       <!-- Região Sul -->
-      <path id="PR" class="sul" d="M530,720 L600,740 L630,810 L510,810 Z" onclick="mostrar('PR')" </path>
+      <path id="PR" class="sul" d="M530,720 L600,740 L630,810 L510,810 Z" onclick="mostrar('PR')" ></path>
       <path id="SC" class="sul" d="M570,830 L630,820 L610,890 L570,860 L520,830 L520,820 Z" onclick="mostrar('SC')"></path>
       <path id="RS" class="sul" d="M510,840 L600,900 L530,990 L430,920 Z" onclick="mostrar('RS')"></path>
       
@@ -227,11 +228,7 @@
   
   <script>
 
-    function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
+
 
     const dados = {    
 
@@ -240,7 +237,8 @@
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
         cultura: "Estado da região Norte conhecido pela forte presença da cultura nordestina, com festividades como o aniversário do estado e a Feira de Exposições. A culinária local inclui pratos com peixes de água doce e frutas regionais.",
-        audioDesc: "Som da floresta amazônica com pássaros e animais"
+        audioDesc: "Som da floresta amazônica com pássaros e animais",
+        imagem:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02.jpeg"
       },
       AM: { 
         nome: "Amazonas", 
@@ -403,6 +401,7 @@
       const infoDiv = document.getElementById('info');
       if (estado) {
 
+
         infoDiv.innerHTML = `
           <h2 class='titulo-estado' id="scroll">${estado.nome}</h2>
           <img class='bandeira' src='${estado.bandeira}' alt='Bandeira de ${estado.nome}'>
@@ -410,15 +409,16 @@
           <div class='audio-container'>
             <button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>
             <p class='audio-desc'>${estado.audioDesc}</p>
+            <img src="${estado.imagem}"></img>
           </div>
-        `;
+        `;        
+        window.scrollTo({
+          top: 3000, 
+          behavior: 'smooth' 
+        });
         }
     }
-    function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
+
 
     function toggleAudio() {
       if (isPlaying) {
