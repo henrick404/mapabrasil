@@ -1,0 +1,162 @@
+
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #00a86b, #008cff);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    #mapa-container {
+        background-image: url(mapa-do-brasil-legendado-pintado-regioes.jpg);  
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        max-width: 800px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    svg {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    
+    path {
+      fill: #00b894;
+
+      stroke-width: 1;
+      transition: all 0.3s ease;
+    }
+    
+
+    
+    
+    text {
+      fill: #fff;
+      font-size: 8px;
+      font-weight: bold;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+    
+    #info {
+      margin: 40px auto;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+    }
+    
+    .titulo-estado {
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bandeira {
+      width: 150px;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border: 2px solid white;
+    }
+    
+    .cultura-texto {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+    
+    .destaque {
+      color: #ffd700;
+      font-weight: bold;
+    }
+    
+    .audio-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .audio-btn {
+      background: linear-gradient(to right, #ff8a00, #ff2070);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .audio-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .audio-btn.playing {
+      background: linear-gradient(to right, #ff2070, #ff8a00);
+    }
+    
+    .audio-desc {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* Estados com cores diferentes por região */
+    .norte { fill: #00b89300; }
+    .nordeste { fill: #e3090900; }
+    .centro-oeste { fill: #fd853500; }
+    .sudeste { fill: #fcff3600; }
+    .sul { fill: #b779fd00; }
+    
+
