@@ -9,8 +9,8 @@
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
         cultura: "Estado da região Norte conhecido pela forte presença da cultura nordestina, com festividades como o aniversário do estado e a Feira de Exposições. A culinária local inclui pratos com peixes de água doce e frutas regionais.",
-        audioDesc: "Som da floresta amazônica com pássaros e animais",
-        imagem:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02.jpeg"
+        audioDesc: "Som da floresta amazônica com pássaros e animais"
+
       },
       AM: { 
         nome: "Amazonas", 
@@ -89,12 +89,17 @@
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/8/88/Bandeira_de_Alagoas.svg", 
         cultura: "Terra do Guerreiro, folguedo natalino que mistura elementos indígenas, africanos e europeus. A culinária alagoana é famosa pelo sururu, molusco preparado com leite de coco e servido com pirão.",
         audioDesc: "Som de sururu sendo preparado"
+
       },
       SE: { 
         nome: "Sergipe", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/be/Bandeira_de_Sergipe.svg", 
         cultura: "Conhecido pelo São João de Estância, um dos mais tradicionais do Nordeste, e pelo artesanato em renda e palha. A culinária sergipana inclui a moqueca e o caranguejo.",
-        audioDesc: "Som de forró e festas juninas"
+        audioDesc: "Som de forró e festas juninas",
+        imagem1:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.01.jpeg",
+        imagem2:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02 (1).jpeg",
+        imagem3:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02 (2).jpeg",
+        imagem4:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02.jpeg"
       },
       BA: { 
         nome: "Bahia", 
@@ -172,8 +177,6 @@
       const estado = dados[uf];
       const infoDiv = document.getElementById('info');
       if (estado) {
-
-
         infoDiv.innerHTML = `
           <h2 class='titulo-estado' id="scroll">${estado.nome}</h2>
           <img class='bandeira' src='${estado.bandeira}' alt='Bandeira de ${estado.nome}'>
@@ -181,7 +184,17 @@
           <div class='audio-container'>
             <button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>
             <p class='audio-desc'>${estado.audioDesc}</p>
-            <img src="${estado.imagem}"></img>
+            <div class='organizahor'>
+                <div class='organizaver'>
+                    <div class='foto'><img src="${estado.imagem1}"></img> <p>Texto1</p></div>
+                    <div class='foto'><img src="${estado.imagem2}"></img> <p>Texto2</p></div>    
+                </div>
+            
+                <divclass='organizaver'>
+                    <div class='foto'><img src="${estado.imagem3}"></img> <p>Texto3</p></div>
+                    <div class='foto'><img src="${estado.imagem4}"></img> <p>Texto4</p></div>    
+                </div>  
+            </div>
           </div>
         `;        
         window.scrollTo({

@@ -1,4 +1,7 @@
-
+img{
+    width: 100px;
+    height: 100px;
+}
 
 
     body {
@@ -160,3 +163,27 @@
     .sul { fill: #b779fd00; }
     
 
+.organizahor{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+
+
+}    
+
+.foto{
+    background-color: rgb(168, 168, 168);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 30px; 
+    width: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.foto:hover{
+    transform: scale(120%);
+
+}
