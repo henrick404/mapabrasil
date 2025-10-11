@@ -1,6 +1,10 @@
 
 
-
+    const titulo1="Comida"
+    const titulo2="Turismo"
+    const titulo3="Vegetação"
+    const titulo4="Curiosidade"
+    let tipo=1
 
     const dados = {    
 
@@ -172,13 +176,36 @@
     let audioContext = null;
     let noiseNode = null;
     let isPlaying = false;
+
     function AbrirInfo(){
       document.getElementById("popup").style.display="flex";
-
     }
     function defineElementos(){
       const defEle = document.getElementById('descricao');
-      defEle.innerHTML=`<h1>texto</h1><button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>`;
+      defEle.innerHTML=`
+      <button onclick='fecharInfo()'>X<button>
+      <h1>${titulop}</h1>`;
+
+    }
+    function fecharInfo(){
+      document.getElementById("popup").style.display="none";
+    }
+
+
+    function defineTema1(){
+      titulop=titulo1
+
+    }
+    function defineTema2(){
+      titulop=titulo2
+
+    }
+    function defineTema3(){
+      titulop=titulo3
+
+    }
+    function defineTema4(){
+      titulop=titulo4
 
     }
     function mostrar(uf) {
@@ -194,13 +221,13 @@
             <p class='audio-desc'>${estado.audioDesc}</p>
             <div class='organizahor'>
                 <div class='organizaver'>
-                    <div class='foto' onclick='AbrirInfo()' onclick='defineElementos()'><img src="${estado.imagem1}"></img> <p>Comida</p></div>
-                    <div class='foto'><img src="${estado.imagem2}"></img> <p>Turismo</p></div>    
+                    <div class='foto' onclick='AbrirInfo(); defineTema1(); defineElementos() '><img src="${estado.imagem1}"></img> <p>${titulo1}</p></div>
+                    <div class='foto' onclick='AbrirInfo(); defineTema2(); defineElementos()'><img src="${estado.imagem2}"></img> <p>${titulo2}</p></div>    
                 </div>
             
-                <divclass='organizaver'>
-                    <div class='foto'><img src="${estado.imagem3}"></img> <p>Vegetação</p></div>
-                    <div class='foto'><img src="${estado.imagem4}"></img> <p>Curiosidade</p></div>    
+                <div  class='organizaver'>
+                    <div class='foto' onclick='AbrirInfo(); defineTema3(); defineElementos()'><img src="${estado.imagem3}"></img> <p>${titulo3}</p></div>
+                    <div class='foto' onclick='AbrirInfo(); defineTema4(); defineElementos()'><img src="${estado.imagem4}"></img> <p>${titulo4}</p></div>    
                 </div>  
             </div>
           </div>
@@ -212,6 +239,10 @@
         }
     }
 
+
+
+    
+    
     function toggleAudio() {
       if (isPlaying) {
         stopWhiteNoise();

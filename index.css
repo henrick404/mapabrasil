@@ -197,8 +197,9 @@
   justify-content: center;
 
 }
-.texto{
+#descricao{
   width: 40%;
   background-color: rgb(0, 0, 0);
+  
 
 }
