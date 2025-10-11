@@ -172,7 +172,15 @@
     let audioContext = null;
     let noiseNode = null;
     let isPlaying = false;
+    function AbrirInfo(){
+      document.getElementById("popup").style.display="flex";
 
+    }
+    function defineElementos(){
+      const defEle = document.getElementById('descricao');
+      defEle.innerHTML=`<h1>texto</h1><button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>`;
+
+    }
     function mostrar(uf) {
       const estado = dados[uf];
       const infoDiv = document.getElementById('info');
@@ -186,24 +194,23 @@
             <p class='audio-desc'>${estado.audioDesc}</p>
             <div class='organizahor'>
                 <div class='organizaver'>
-                    <div class='foto'><img src="${estado.imagem1}"></img> <p>Texto1</p></div>
-                    <div class='foto'><img src="${estado.imagem2}"></img> <p>Texto2</p></div>    
+                    <div class='foto' onclick='AbrirInfo()' onclick='defineElementos()'><img src="${estado.imagem1}"></img> <p>Comida</p></div>
+                    <div class='foto'><img src="${estado.imagem2}"></img> <p>Turismo</p></div>    
                 </div>
             
                 <divclass='organizaver'>
-                    <div class='foto'><img src="${estado.imagem3}"></img> <p>Texto3</p></div>
-                    <div class='foto'><img src="${estado.imagem4}"></img> <p>Texto4</p></div>    
+                    <div class='foto'><img src="${estado.imagem3}"></img> <p>Vegetação</p></div>
+                    <div class='foto'><img src="${estado.imagem4}"></img> <p>Curiosidade</p></div>    
                 </div>  
             </div>
           </div>
         `;        
         window.scrollTo({
-          top: 3000, 
+          top: 1100, 
           behavior: 'smooth' 
         });
         }
     }
-
 
     function toggleAudio() {
       if (isPlaying) {
