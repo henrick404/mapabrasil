@@ -180,13 +180,7 @@
     function AbrirInfo(){
       document.getElementById("popup").style.display="flex";
     }
-    function defineElementos(){
-      const defEle = document.getElementById('descricao');
-      defEle.innerHTML=`
-      <button onclick='fecharInfo()'>X<button>
-      <h1>${titulop}</h1>`;
-
-    }
+  
     function fecharInfo(){
       document.getElementById("popup").style.display="none";
     }
@@ -208,6 +202,11 @@
       titulop=titulo4
 
     }
+    function defineInfos(){
+      const estado = dados[uf];
+    }
+
+
     function mostrar(uf) {
       const estado = dados[uf];
       const infoDiv = document.getElementById('info');
@@ -237,12 +236,19 @@
           behavior: 'smooth' 
         });
         }
-    }
+    }    
+    function defineElementos(){
+        const defEle = document.getElementById('descricao');
+        defEle.innerHTML=`          
+          <button onclick='fecharInfo()' id='botaoFechar'>X</button>
+          <p class='titulo'>${titulop}</p>
 
+         
+          <p class='texto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        `;
 
-
-    
-    
+    }  
+      
     function toggleAudio() {
       if (isPlaying) {
         stopWhiteNoise();
