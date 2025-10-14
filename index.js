@@ -7,6 +7,7 @@
     let tipo=1;
     var estado
 
+    //info dos estados
     const dados = {    
 
 
@@ -178,6 +179,7 @@
     let noiseNode = null;
     let isPlaying = false;
 
+    //abre as informações e fecha tbm
     function AbrirInfo(){
       document.getElementById("popup").style.display="flex";
     }
@@ -186,8 +188,7 @@
       document.getElementById("popup").style.display="none";
     }
 
-
-
+    //vai definir oq é a informação se é sobre comida,vegetação ou etc 
     function defineTema1(){
       titulop=titulo1
       imagemp=estado.imagem1
@@ -207,7 +208,7 @@
       imagemp=estado.imagem4      
 
     }
-
+    //exibi as info
     function defineElementos(){
       const defEle = document.getElementById('descricao');
       document.getElementById('descricao').style.backgroundImage = `url('${imagemp}')`;
@@ -222,7 +223,7 @@
  
 
 
-
+    //é oq acontece após licar em um estado
     function mostrar(uf) {
       estado = dados[uf];
       const infoDiv = document.getElementById('info');
@@ -256,7 +257,7 @@
     }    
 
 
-      
+    // partir daqui mexe com aúdio como não mexi nessa parte nem sei oq faz
     function toggleAudio() {
       if (isPlaying) {
         stopWhiteNoise();
