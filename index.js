@@ -190,27 +190,31 @@
 
     function defineTema1(){
       titulop=titulo1
-
-
+      imagemp=estado.imagem1
     }
     function defineTema2(){
       titulop=titulo2
+      imagemp=estado.imagem2
 
     }
     function defineTema3(){
       titulop=titulo3
+      imagemp=estado.imagem3
 
     }
     function defineTema4(){
       titulop=titulo4
+      imagemp=estado.imagem4      
 
     }
 
     function defineElementos(){
       const defEle = document.getElementById('descricao');
+      document.getElementById('descricao').style.backgroundImage = `url('${imagemp}')`;
       defEle.innerHTML=`          
         <button onclick='fecharInfo()' id='botaoFechar'>X</button>
-        <p class='titulo'>${titulop}</p>   
+        <p class='titulo'>${titulop}</p>  
+
         <p class='texto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       `;
     } 
