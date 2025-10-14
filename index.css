@@ -203,7 +203,6 @@
   background-repeat: no-repeat;
   background-size:contain;
   background-color: grey;
-  
 }
 
 
@@ -212,15 +211,14 @@
   display: block;
   margin-left: auto;
   height: 30px;
-  
 }
 .titulo{
-  margin-top: 0px;
+  margin-top: 55%;
   border: 0px;
   font-size: 35px;
-
 }
 .texto{
+  color: rgb(255, 255, 255);
   text-align: justify;
   font-size: 20px;
 }
