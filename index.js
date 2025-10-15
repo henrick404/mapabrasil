@@ -10,168 +10,226 @@
     //info dos estados
     const dados = {    
 
-
       AC: { 
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
-        cultura: "Estado da região Norte conhecido pela forte presença da cultura nordestina, com festividades como o aniversário do estado e a Feira de Exposições. A culinária local inclui pratos com peixes de água doce e frutas regionais.",
         audioDesc: "Som da floresta amazônica com pássaros e animais"
 
       },
       AM: { 
         nome: "Amazonas", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bandeira_do_Amazonas.svg", 
-        cultura: "Famoso pelo Festival Folclórico de Parintins, uma das maiores manifestações culturais do país. A culinária é baseada em peixes regionais como tambaqui e pirarucu, preparados com ingredientes da floresta.",
         audioDesc: "Som da floresta amazônica com animais e rios"
       },
       RR: { 
         nome: "Roraima", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/9/98/Bandeira_de_Roraima.svg", 
-        cultura: "Estado com forte influência indígena, especialmente das etnias Yanomami e Macuxi. O Festival de Praia de Boa Vista é um dos principais eventos, celebrando as belezas naturais do estado.",
         audioDesc: "Som de vento e pássaros do cerrado"
       },
       RO: { 
         nome: "Rondônia", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Bandeira_de_Rond%C3%B4nia.svg", 
-        cultura: "Conhecido pelo Arraial Flor do Maracujá, um dos maiores festejos juninos da região Norte. A culinária mescla influências nordestinas, paulistas e sulistas, com destaque para o churrasco pantaneiro.",
         audioDesc: "Som de festa junina com forró"
       },
       PA: { 
         nome: "Pará", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/02/Bandeira_do_Par%C3%A1.svg", 
-        cultura: "Berço do Carimbó, dança de origem africana que deu origem à lambada e ao zouk. O Círio de Nazaré, em Belém, é uma das maiores procissões católicas do mundo. A culinária paraense é famosa pelo açaí e pelo pato no tucupi.",
         audioDesc: "Som de Carimbó e festividades"
       },
       AP: { 
         nome: "Amapá", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bandeira_do_Amap%C3%A1.svg", 
-        cultura: "Estado com forte presença da cultura marabaixa, manifestação afro-brasileira que celebra a resistência negra. A culinária é rica em peixes e frutos do mar, com destaque para o camarão no bafo.",
         audioDesc: "Som de tambores do marabaixa"
       },
       TO: { 
         nome: "Tocantins", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bandeira_do_Tocantins.svg", 
-        cultura: "Conhecido pela Festa do Divino Espírito Santo e pela Cavalhada, representação medieval que acontece em cidades como Natividade. A culinária inclui pratos como arroz com pequi e guariroba.",
         audioDesc: "Som de cavalos e festas tradicionais"
       },
       MA: { 
         nome: "Maranhão", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/45/Bandeira_do_Maranh%C3%A3o.svg", 
-        cultura: "Terra do Bumba Meu Boi, manifestação cultural que mistura teatro, música e dança, reconhecida como Patrimônio Cultural Imaterial da Humanidade. O Tambor de Crioula é outra expressão cultural importante.",
         audioDesc: "Som de tambores do Bumba Meu Boi"
       },
       PI: { 
         nome: "Piauí", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/3/33/Bandeira_do_Piau%C3%AD.svg", 
-        cultura: "Conhecido pelas tradições juninas, especialmente em Campo Maior, que realiza um dos maiores carnavais fora de época do Nordeste. A culinária inclui a carne de sol e a panelada.",
-        audioDesc: "Som de forró e festas juninas"
+        audioDesc: "Som de forró e festas juninas",
+        imagem1:"Piaui/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Piaui/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Piaui/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Piaui/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       CE: { 
         nome: "Ceará", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Bandeira_do_Cear%C3%A1.svg", 
-        cultura: "Terra do humor e do forró, com grandes festivais como o Ceará Music. A cultura cearense é marcada pela literatura de cordel, xilogravura e artesanato em renda. A culinária é famosa pela carne de sol e baião de dois.",
         audioDesc: "Som de forró pé-de-serra"
       },
       RN: { 
         nome: "Rio Grande do Norte", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/3/30/Bandeira_do_Rio_Grande_do_Norte.svg", 
-        cultura: "Conhecido pelas belas praias e pelo Maior São João do Mundo, em Campina Grande. A cultura potiguar é marcada pelo artesanato em cerâmica e pela música, com destaque para o forró.",
-        audioDesc: "Som de ondas do mar e forró"
+        audioDesc: "Som de ondas do mar e forró",
+        imagem1:"Rio grande do norte/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Rio grande do norte/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Rio grande do norte/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Rio grande do norte/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       PB: { 
         nome: "Paraíba", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bandeira_da_Para%C3%ADba.svg", 
-        cultura: "Terra do maior São João do Mundo, em Campina Grande, e do Repente, manifestação musical típica do Nordeste. A culinária paraibana inclui a galinha à cabidela e a rapadura.",
         audioDesc: "Som de repente e viola"
       },
       PE: { 
         nome: "Pernambuco", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/5/59/Bandeira_de_Pernambuco.svg", 
-        cultura: "Berço do Frevo e do Maracatu, ritmos que animam o Carnaval de Recife e Olinda. A cultura pernambucana também é marcada pelo artesanato em barro e madeira. A culinária é famosa pelo bolo de rolo e pela carne de sol com macaxeira.",
         audioDesc: "Som de frevo e maracatu"
       },
       AL: { 
         nome: "Alagoas", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/8/88/Bandeira_de_Alagoas.svg", 
-        cultura: "Terra do Guerreiro, folguedo natalino que mistura elementos indígenas, africanos e europeus. A culinária alagoana é famosa pelo sururu, molusco preparado com leite de coco e servido com pirão.",
         audioDesc: "Som de sururu sendo preparado"
 
       },
       SE: { 
         nome: "Sergipe", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/be/Bandeira_de_Sergipe.svg", 
-        cultura: "Conhecido pelo São João de Estância, um dos mais tradicionais do Nordeste, e pelo artesanato em renda e palha. A culinária sergipana inclui a moqueca e o caranguejo.",
         audioDesc: "Som de forró e festas juninas",
-        imagem1:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.01.jpeg",
-        imagem2:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02 (1).jpeg",
-        imagem3:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02 (2).jpeg",
-        imagem4:"Sergipe/WhatsApp Image 2025-10-06 at 12.05.02.jpeg"
+        imagem1:"Sergipe/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Sergipe/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Sergipe/vegetacao.jpg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Sergipe/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       BA: { 
         nome: "Bahia", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/28/Bandeira_da_Bahia.svg", 
-        cultura: "Berço do axé, do acarajé e do Carnaval de Salvador, considerado a maior festa de rua do mundo. A cultura baiana é marcada pelo candomblé, capoeira e pelo artesanato em couro e madeira.",
         audioDesc: "Som de axé e tambores do candomblé"
       },
       MT: { 
         nome: "Mato Grosso", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Bandeira_de_Mato_Grosso.svg", 
-        cultura: "Estado com forte influência das culturas indígen, pantaneira e sulista. A Festa de São Benedito, em Cuiabá, é uma das principais manifestações culturais. A culinária inclui o pacu assado e a farofa de banana.",
-        audioDesc: "Som de viola de cocho e siriri"
+        audioDesc: "Som de viola de cocho e siriri",
+        imagem1:"Mato grosso/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Mato grosso/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Mato grosso/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Mato grosso/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       MS: { 
         nome: "Mato Grosso do Sul", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg", 
-        cultura: "Terra do chamamé, ritmo musical originário da fronteira com o Paraguai, e da cultura pantaneira. A culinária é baseada em carnes bovinas e peixes de água doce.",
-        audioDesc: "Som de chamamé e natureza pantaneira"
+        audioDesc: "Som de chamamé e natureza pantaneira",
+        imagem1:"Mato grosso do sul/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Mato grosso do sul/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Mato grosso do sul/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Mato grosso do sul/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       GO: { 
         nome: "Goiás", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_Goi%C3%A1s.svg", 
-        cultura: "Conhecido pelas Cavalhadas de Pirenópolis e pela Festa do Divino. A cultura goiana é marcada pela viola caipira e pelo cururu. A culinária inclui o arroz com pequi e o empadão goiano.",
         audioDesc: "Som de viola caipira e folia do divino"
       },
       SP: { 
         nome: "São Paulo", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg", 
-        cultura: "Centro cultural e econômico do país, com diversidade de influências de imigrantes italianos, japoneses, árabes e outros. Conhecido pela Avenida Paulista, Museus e pela pizza. A culinária paulista é uma mistura de tradições.",
         audioDesc: "Som do trânsito e movimento da cidade"
       },
       RJ: { 
         nome: "Rio de Janeiro", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg", 
-        cultura: "Famoso pelo samba, Carnaval e praias icônicas como Copacabana e Ipanema. A cultura carioca é marcada pela bossa nova, pelo futebol e pelo pão de açúcar. A culinária inclui a feijoada e o churrasco.",
-        audioDesc: "Som de samba e ondas do mar"
+        audioDesc: "Som de samba e ondas do mar",
+        imagem1:"Rio de janeiro/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Rio de janeiro/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Rio de janeiro/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Rio de janeiro/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       MG: { 
         nome: "Minas Gerais", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bandeira_de_Minas_Gerais.svg", 
-        cultura: "Famoso pelo pão de queijo, feijão tropeiro e arquitetura colonial das cidades históricas. A cultura mineira é marcada pelo queijo, cachaça e pela música sertaneja. As festas juninas são muito tradicionais.",
-        audioDesc: "Som de viola e festas juninas"
+        audioDesc: "Som de viola e festas juninas",
+        imagem1:"Minas/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Minas/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Minas/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Minas/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
+
       },
       ES: { 
         nome: "Espírito Santo", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg", 
-        cultura: "Conhecido pela Festa da Penha e pela culinária com influência italiana e africana. A moqueca capixaba, preparada em panela de barro, é o prato mais famoso. A cultura é marcada pelas bandas de congo.",
-        audioDesc: "Som de congo e ondas do mar"
+        audioDesc: "Som de congo e ondas do mar",
+        imagem1:"Espirito santo/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Espirito santo/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Espirito santo/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Espirito santo/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       PR: { 
         nome: "Paraná", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/9/93/Bandeira_do_Paran%C3%A1.svg", 
-        cultura: "Estado com forte influência europeia, especialmente alemã, italiana, polonesa e ucraniana. Conhecido pelas Cataratas do Iguaçu e pela Festa da Uva. A culinária inclui o barreado e o pierogi.",
-        audioDesc: "Som de danças folclóricas europeias"
+        audioDesc: "Som de danças folclóricas europeias",
+        imagem1:"Paran/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Paran/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Paran/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Paran/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       SC: { 
         nome: "Santa Catarina", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Bandeira_de_Santa_Catarina.svg", 
-        cultura: "Estado com forte influência alemã, italiana e açoriana. Conhecido pela Oktoberfest de Blumenau e pelas praias. A culinária inclui o marreco com repolho roxo e o café colonial.",
-        audioDesc: "Som de música alemã e ondas do mar"
+        audioDesc: "Som de música alemã e ondas do mar",
+        imagem1:"Santa catarina/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Santa catarina/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Santa catarina/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Santa catarina/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       },
       RS: { 
         nome: "Rio Grande do Sul", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bandeira_do_Rio_Grande_do_Sul.svg", 
-        cultura: "Cultura gaúcha marcada pelo chimarrão, churrasco e danças tradicionais como o fandango. A Semana Farroupilha celebra as tradições gaúchas. A culinária inclui o arroz de carreteiro e o churrasco.",
-        audioDesc: "Som de gaita e fandango"
+        audioDesc: "Som de gaita e fandango",
+        imagem1:"Rio grande do sul/comida.jpeg",
+        texto1:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem2:"Rio grande do sul/turismo.jpeg",
+        texto2:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem3:"Rio grande do sul/vegetacao.jpeg",
+        texto3:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado).",
+        imagem4:"Rio grande do sul/curiosidade.jpeg",
+        texto4:"A culinária de Sergipe é marcada por ingredientes como frutos do mar, camarão, carne de sol, carne de bode, milho e mandioca. Pratos típicos incluem a moqueca de camarão, o caruru, o sarapatel e o caranguejo (considerada a iguaria que mais representa o estado)."
       }
     };
 
@@ -192,31 +250,32 @@
     function defineTema1(){
       titulop=titulo1
       imagemp=estado.imagem1
+      textop=estado.texto1
     }
     function defineTema2(){
       titulop=titulo2
       imagemp=estado.imagem2
+      textop=estado.texto2
 
     }
     function defineTema3(){
       titulop=titulo3
       imagemp=estado.imagem3
-
+      textop=estado.texto3
     }
     function defineTema4(){
       titulop=titulo4
       imagemp=estado.imagem4      
-
+      textop=estado.texto4
     }
     //exibi as info
     function defineElementos(){
       const defEle = document.getElementById('descricao');
-      document.getElementById('descricao').style.backgroundImage = `url('${imagemp}')`;
       defEle.innerHTML=`          
         <button onclick='fecharInfo()' id='botaoFechar'>X</button>
         <p class='titulo'>${titulop}</p>  
-
-        <p class='texto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class='texto'>${textop}</p>
+        <img src='${imagemp}' class='imagem'></img>
       `;
     } 
     
@@ -231,7 +290,6 @@
         infoDiv.innerHTML = `
           <h2 class='titulo-estado' id="scroll">${estado.nome}</h2>
           <img class='bandeira' src='${estado.bandeira}' alt='Bandeira de ${estado.nome}'>
-          <p class='cultura-texto'>${estado.cultura}</p>
           <div class='audio-container'>
             <button id='audioBtn' class='audio-btn' onclick='toggleAudio()'>Ouvir Som Característico</button>
             <p class='audio-desc'>${estado.audioDesc}</p>
