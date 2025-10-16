@@ -14,20 +14,28 @@
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
         audioDesc: "Som da floresta amazônica com pássaros e animais",
-        imagem1:"Espirito santo/comida.jpeg",
+        imagem1:"Acre/comida.jpeg",
         texto1:"A culinária acreana é influenciada pela cultura indígena, cabocla e nordestina. Um prato emblemático é o baião de dois, preparado com arroz, feijão verde e carne de sol. No entanto, a verdadeira iguaria da região é o tacacá, uma sopa quente feita com tucupi (um caldo extraído da mandioca brava), jambú (uma erva local) e camarões. É um prato típico da região Norte e muito consumido no Acre, especialmente nas festas populares.",
-        imagem2:"Espirito santo/turismo.jpeg",
+        imagem2:"Acre/turismo.jpeg",
         texto2:"O Parque Nacional da Serra do Divisor, uma área de preservação ambiental localizada no extremo oeste do estado, é um destino importante para ecoturismo. Com montanhas, florestas densas e uma fauna diversificada, o parque atrai aventureiros e estudiosos da biodiversidade. Há também o Palácio Rio Branco, em Rio Branco, que tem grande valor histórico por ser um marco da história política e administrativa do estado.",
-        imagem3:"Espirito santo/vegetacao.jpeg",
+        imagem3:"Acre/vegetacao.jpeg",
         texto3:"O Acre é parte da Floresta Amazônica, um dos maiores biomas do planeta. A vegetação predominante é tropical e com muita biodiversidade. São comuns árvores de grande porte, como seringueiras e castanheiras, e vegetação de várzea nos rios. Além disso, o estado possui uma grande extensão de áreas de floresta preservadas, com rios, igarapés e fauna exuberante.",
-        imagem4:"Espirito santo/curiosidade.jpeg",
+        imagem4:"Acre/curiosidade.jpeg",
         texto4:"O Acre foi o último estado a ser incorporado ao Brasil, em 1903, após o Tratado de Petrópolis, que resultou na troca de terras por dinheiros e terras da região do estado do Amazonas. A adesão do Acre à Federação Brasileira é parte de um processo histórico importante envolvendo o Contestado do Acre e a disputa com a Bolívia."
 
       },
       AM: { 
         nome: "Amazonas", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bandeira_do_Amazonas.svg", 
-        audioDesc: "Som da floresta amazônica com animais e rios"
+        audioDesc: "Som da floresta amazônica com animais e rios",
+        imagem1:"Amazonas/comida.jpeg",
+        texto1:"Pato no tucupi é um prato emblemático: consiste em pato cozido em tucupi (líquido extraído da mandioca-brava, que precisa passar por processo de cozimento para ficar seguro), jambu (que causa aquela sensação de dormência ou formigamento na boca), e temperos regionais. É um prato tradicional especialmente em ocasiões festivas, como o Círio de Nazaré. Representa bem a miscigenação de cultura indígena, ribeirinha, utilizando ingredientes da floresta.",
+        imagem2:"Amazonas/turismo.jpeg",
+        texto2:"Manaus é um grande atrativo: o Teatro Amazonas é uma construção histórica belíssima, símbolo da época da borracha; outro ponto interessante é o encontro das águas, quando o Rio Negro e o Solimões correm lado a lado, de cores distintas, antes de se fundirem. Além disso há viagens de barco pelos rios, visitas a comunidades ribeirinhas, reservas naturais, trilhas na selva, fauna e flora únicas.",
+        imagem3:"Amazonas/vegetacao.jpeg",
+        texto3:"Grande parte do estado está coberta pela Floresta Amazônica, que abriga árvores gigantes, plantas epífitas, cipós, palmeiras etc. Além disso há floresta de várzea (alagável) e igapós, ambientes que se inundam sazonalmente. Essa vegetação densa mantém o solo úmido e ajuda a regular o clima, além de armazenar carbono. Há também as matas de terra firme, mais altas, e igarapés que cortam essas florestas",
+        imagem4:"Amazonas/curiosidade.jpeg",
+        texto4:"O tucupi, essencial no prato Pato no tucupi, vem da mandioca-brava, que é tóxica em estado cru. É preciso ferver o suco da mandioca por horas para eliminar o veneno. Esse processo mostra tanto o conhecimento tradicional indígena/local como o cuidado necessário para aproveitar recursos naturais da região."
       },
       RR: { 
         nome: "Roraima", 
