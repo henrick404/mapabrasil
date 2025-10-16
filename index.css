@@ -215,10 +215,17 @@
 .texto{
   color: rgb(255, 255, 255);
   text-align: justify;
+  margin: 20px;
   font-size: 20px;
 }
 .imagem{
   margin: 20px;
   margin-bottom: 40px;
   width: 80%;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: #ffffff;
+  }
 }
