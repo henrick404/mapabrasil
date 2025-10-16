@@ -224,8 +224,13 @@
   width: 80%;
 }
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    background-color: #ffffff;
+  #popup{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 1200px;
+    display: none;
+    background-color: #14111100;
+    justify-content: center;
   }
 }
