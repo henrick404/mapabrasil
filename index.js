@@ -13,7 +13,15 @@
       AC: { 
         nome: "Acre", 
         bandeira: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Bandeira_do_Acre.svg", 
-        audioDesc: "Som da floresta amazônica com pássaros e animais"
+        audioDesc: "Som da floresta amazônica com pássaros e animais",
+        imagem1:"Espirito santo/comida.jpeg",
+        texto1:"A culinária acreana é influenciada pela cultura indígena, cabocla e nordestina. Um prato emblemático é o baião de dois, preparado com arroz, feijão verde e carne de sol. No entanto, a verdadeira iguaria da região é o tacacá, uma sopa quente feita com tucupi (um caldo extraído da mandioca brava), jambú (uma erva local) e camarões. É um prato típico da região Norte e muito consumido no Acre, especialmente nas festas populares.",
+        imagem2:"Espirito santo/turismo.jpeg",
+        texto2:"O Parque Nacional da Serra do Divisor, uma área de preservação ambiental localizada no extremo oeste do estado, é um destino importante para ecoturismo. Com montanhas, florestas densas e uma fauna diversificada, o parque atrai aventureiros e estudiosos da biodiversidade. Há também o Palácio Rio Branco, em Rio Branco, que tem grande valor histórico por ser um marco da história política e administrativa do estado.",
+        imagem3:"Espirito santo/vegetacao.jpeg",
+        texto3:"O Acre é parte da Floresta Amazônica, um dos maiores biomas do planeta. A vegetação predominante é tropical e com muita biodiversidade. São comuns árvores de grande porte, como seringueiras e castanheiras, e vegetação de várzea nos rios. Além disso, o estado possui uma grande extensão de áreas de floresta preservadas, com rios, igarapés e fauna exuberante.",
+        imagem4:"Espirito santo/curiosidade.jpeg",
+        texto4:"O Acre foi o último estado a ser incorporado ao Brasil, em 1903, após o Tratado de Petrópolis, que resultou na troca de terras por dinheiros e terras da região do estado do Amazonas. A adesão do Acre à Federação Brasileira é parte de um processo histórico importante envolvendo o Contestado do Acre e a disputa com a Bolívia."
 
       },
       AM: { 
